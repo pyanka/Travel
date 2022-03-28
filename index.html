@@ -1,0 +1,164 @@
+<html>
+<head>
+<style type="text/css">
+#h3
+{
+height:67px;
+width: 1000px;
+background-color:red;
+float:left;	
+}
+ul
+{
+display: inline-flex;
+margin: 0;
+padding: 0;	
+list-style-type:none;
+overflow:hidden;
+background-color:rgb(238, 16, 16);	
+}
+li
+{
+width: 173px;
+margin: 10px;
+padding: 15px;	
+}
+li a
+{
+text-decoration: none;	
+display: block;	
+color: white;
+text-align: centre;	
+}
+li:hover
+{
+background: red;
+border-radius: 3px;	
+}
+.sub-menu-1
+{
+	display: none;
+}
+li:hover .sub-menu-1
+{
+	display: block;
+	position: absolute;
+	background: red;
+	margin-top: 15px;
+	margin-left: -15px;
+}
+li:hover .sub-menu-1 ul
+{
+	display: block;
+	margin: 10px;
+}
+li:hover .sub-menu-1 ul li
+{
+	width: 150px;
+	padding: 10px;
+	border-bottom: 1px dotted #fff;
+	background: transparent;
+	border-radius: 0;
+	text-align: left;
+}
+li:hover .sub-menu-1 ul li:last-child
+{
+	border-bottom: none;
+}
+li:hover .sub-menu-1 ul li a:hover
+{
+	color: #b2ff00;
+}
+#content
+{
+height:550px;
+width:1330px;
+background-color:white;
+background:url("images/tour.png");
+background-size: 100% 100%;
+float:left;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
+
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: "Poppins", sans-serif;
+
+}
+.content1
+{
+	max-width: 650px;
+	margin: 70px 100px;
+float: left;
+}
+.content1 .info h1{
+	color: rgb(17, 16, 16);
+	font-size: 40px;
+	text-transform: uppercase;
+	font-weight: 600;
+	letter-spacing: 2px;
+	line-height: 60px;
+	margin-bottom: 20px;
+}
+.content1 .info h1 span{
+	color: rgb(233, 24, 24);
+	font-size: 50px;
+	font-weight: 600;
+}
+.content1 .info p{
+	font-size: 16px;
+	font-weight: 500;
+	margin-bottom: 40px;
+
+}
+.content1 .info-btn{
+	color: rgb(214, 231, 214);
+	background: rgb(12, 145, 23);
+	text-decoration: none;
+	text-transform: uppercase;
+	font-weight: 700;
+	letter-spacing: 2px;
+	padding: 15px 30px;
+	border-radius: 5px;
+}
+.content1 .info-btn:hover{
+	background-color:rgb(67, 145, 99);
+}
+</style>
+</head>
+<body>
+<div id="h3">
+<ul>
+<li><a href="index.html">Home</a></li>
+<li><a href="about.html">About Us</a></li>
+<li><a href="tours.html">Tours & Packages</a></li>
+<li><a href="gallery.html">Gallery</a></li>
+<li><a href="contact.html">Contact Us</a></li>
+<li><a href="#">Login</a>
+    <div class="sub-menu-1">
+		<ul>
+			<li><a href="adminlog.html">Admin Login</a></li>
+			<li><a href="userlog.html">User Login</a></li>
+		</ul>
+	</div>
+</li>			  
+<li><a href="userreg.html">Sign Up</a>
+</li>		
+</ul>
+
+
+</div>
+<div id="content">
+	<div class="content1">
+		<div class="info">
+	<h1> Welcome To<br><span>Trip To world !</span></h1>
+	<p style="color:black;"><b>We, Trip To World India Services are one of the fastest growing tour and travel company.We are expert in group tours and we have more than 80 clients.We have organized many group tours for various Corporates, Schools, Educational Institutes etc. We provide all-inclusive prices world class tour packages to the best places in India. </p></b>
+	<p style="color:rgb(0, 0, 0)"><b>Tour And Travel India Services is a prestigious venture in Indian Tourism Industry specializing in School Educational Tours and Treks. Tour And Travel India Services is engaged in various activities in the Travel. The rejuvenating value of a short break makes for a great refreshing experience. We promise safe, exciting, educational holidays with a difference.</p></b>
+    <a href="weather.html" class="info-btn">Weather</a>
+</div>
+</div>
+</div>	 
+</html>   

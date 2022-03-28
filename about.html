@@ -1,0 +1,121 @@
+<html>
+<head>
+<style type="text/css">
+#h3
+{
+height:67px;
+width: 1000px;
+background-color:red;
+float:left;	
+}
+ul
+{
+display: inline-flex;
+margin: 0;
+padding: 0;	
+list-style-type:none;
+overflow:hidden;
+background-color:rgb(238, 16, 16);	
+}
+li
+{
+width:140px;
+margin: 10px;
+padding: 15px;	
+}
+li a
+{
+text-decoration: none;	
+display: block;	
+color: white;
+text-align: centre;	
+}
+li:hover
+{
+background: red;
+border-radius: 3px;	
+}
+.sub-menu-1
+{
+	display: none;
+}
+li:hover .sub-menu-1
+{
+	display: block;
+	position: absolute;
+	background: red;
+	margin-top: 15px;
+	margin-left: -15px;
+}
+li:hover .sub-menu-1 ul
+{
+	display: block;
+	margin: 10px;
+}
+li:hover .sub-menu-1 ul li
+{
+	width: 150px;
+	padding: 10px;
+	border-bottom: 1px dotted #fff;
+	background: transparent;
+	border-radius: 0;
+	text-align: left;
+}
+li:hover .sub-menu-1 ul li:last-child
+{
+	border-bottom: none;
+}
+li:hover .sub-menu-1 ul li a:hover
+{
+	color: #b2ff00;
+}
+#content
+{
+height:550px;
+width:1330px;
+background-color:white;
+background:url("images/about.png");
+background-size: 100% 100%;
+float:left;
+}
+div.img{
+margin:100px;
+border:20px solid #ccc;
+float:left;
+width:150px;
+}
+.content1
+{
+	max-width: 650px;
+	margin: 90px 180px;
+}
+</style>
+</head>
+<body>
+<div id="h3">
+<ul>
+<li><a href="index.html">Home</a></li>
+<li><a href="about.html">About Us</a></li>
+<li><a href="tours.html">Tours & Packages</a></li>
+<li><a href="gallery.html">Gallery</a></li>
+<li><a href="contact.html">Contact Us</a></li>
+<li><a href="#">Login</a>
+    <div class="sub-menu-1">
+		<ul>
+			<li><a href="adminlog.html">Admin Login</a></li>
+			<li><a href="userlog.html">User Login</a></li>
+		</ul>
+	</div>
+</li>			  
+<li><a href="userreg.html">Sign Up</a>
+</li>		
+</ul>
+</div>
+<div id="content">
+	<div class="content1">
+	<h2>About Us</h2>
+    <p style="color:rgb(20, 18, 18)"><b>Trip To World is the world's largest travel site , enabling travellers to plan and book the perfect trip. Trip To World offers advice from millions of travellers and a wide variety of travel choices and planning features with seamless links to booking tools that check hundreds of websites to find great hotel prices. Trip To World branded sites make up the largest travel community in the world, reaching 350 million unique monthly visitors, and 320 million reviews and opinions covering more than 6.2 million accommodations, restaurants and attractions. The sites operate in 48 countries worldwide. </p></b>
+</div>
+</div>
+</body>
+</html>

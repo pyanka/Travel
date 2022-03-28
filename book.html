@@ -1,0 +1,243 @@
+<html>
+<head>
+<script type="text/javascript">
+function validation()
+{
+var RE_NUM=/^(\d)+$/;
+var u1=document.getElementById("td").value;
+var u2=document.getElementById("nam").value;
+var u3=document.getElementById("n").value;
+var u5=document.getElementById("d").value;
+var u6=document.getElementById("m").value;
+var u7=document.getElementById("y").value;
+if(u1=="")
+{
+alert("Tour ID cannot be left blank");
+return false;
+}
+if(u2=="")
+{
+alert("Tour Name cannot be left blank");
+return false;
+}
+if(u3=="")
+{
+alert("Number of people cannot be left blank");
+return false;
+}
+if(!RE_NUM.test(u3))
+{
+alert("Number of people should be numeric");
+return false;
+}
+if(u5=="")
+{
+alert("Day cannot be left blank");
+return false;
+}
+if(!RE_NUM.test(u5))
+{
+alert("Day should be numeric");
+return false;
+}
+if(u6=="")
+{
+alert("Month cannot be left blank");
+return false;
+}
+if(!RE_NUM.test(u6))
+{
+alert("Month should be numeric");
+return false;
+}
+if(u7=="")
+{
+alert("Year cannot be left blank");
+return false;
+}
+if(!RE_NUM.test(u6))
+{
+alert("Year should be numeric");
+return false;
+}
+}
+</script>
+<style type="text/css">
+#h3
+{
+height:67px;
+width: 1000px;
+background-color:red;
+float:left;	
+}
+ul
+{
+display: inline-flex;
+margin: 0;
+padding: 0;	
+list-style-type:none;
+overflow:hidden;
+background-color:rgb(238, 16, 16);	
+}
+li
+{
+width:220px;
+margin: 10px;
+padding: 15px;	
+}
+li a
+{
+    text-decoration: none;	
+display: block;	
+color: white;
+text-align: centre;	
+}
+li:hover
+{
+background: red;
+border-radius: 3px;	
+}
+.sub-menu-1
+{
+	display: none;
+}
+li:hover .sub-menu-1
+{
+	display: block;
+	position: absolute;
+	background: red;
+	margin-top: 15px;
+	margin-left: -15px;
+}
+li:hover .sub-menu-1 ul
+{
+	display: block;
+    margin: 10px;
+}
+li:hover .sub-menu-1 ul li
+{
+	width: 150px;
+	padding: 10px;
+	border-bottom: 1px dotted #fff;
+	background: transparent;
+	border-radius: 0;
+	text-align: left;
+}
+li:hover .sub-menu-1 ul li:last-child
+{
+	border-bottom: none;
+}
+li:hover .sub-menu-1 ul li a:hover
+{
+	color: #b2ff00;
+}
+#content
+{
+height:550px;
+width:1350px;
+background-color:white;
+background:url("images/user.jpg");
+background-size: 100% 100%;
+float:left;
+}
+div.img{
+margin:100px;
+border:20px solid #ccc;
+float:left;
+width:150px;
+}
+#form{width: 300px; height: 300px; margin: 0 auto;}
+input[type=text], select {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 5px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+textarea {
+  width: 60%;
+  padding: 12px 25px;
+  margin: 5px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+input[type=submit] {
+  width: 100%;
+  background-color: #4CAF50;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+input[type=reset] {
+  width: 100%;
+  background-color: #4CAF50;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+input[type=submit]:hover {
+  background-color: #45a049;
+}
+input[type=reset]:hover {
+  background-color: #45a049;
+}
+
+
+</style>
+</head>
+<body>
+<div id="h3">
+<ul>
+<li><a href="userhome.php">Home</a></li>
+<li><a href="usertours.php">Tours & Packages</a></li>
+<li><a href="book.html">Book Now!</a></li>
+<li><a href="mytours.php">My Tours</a></li>
+<li><a href="logout.php">Log Out</a></li>
+</ul>
+</div>
+<div id="content">
+<div id="form">
+    <h1>Book A Tour!</h1>
+    <form  name="f3" onsubmit="return validation()" action="php/booktour.php" method="post">
+    <p><table>
+    <tr>
+    <td>Tour ID</td>
+    <td><input type="text" name="tid" id="td" placeholder="Tour ID">
+    </td></tr>
+    <tr>
+    <td>Tour Name</td>
+    <td><input type="text" name="name" id="nam" placeholder="Tour Name">
+    </td></tr>
+    <tr>
+    <td>No. of people</td>
+    <td><input type="text" name="num" id="n" placeholder="People">
+    </td></tr>
+    <tr>
+    <td>Date of Journey</td>
+    <td><textarea rows="1" cols="2" name="day" id="d" placeholder="dd"></textarea>
+    <textarea rows="1" cols="2" name="month" id="m" placeholder="mm"></textarea>
+    <textarea rows="1" cols="4" name="year" id="y" placeholder="yyyy"></textarea>
+    </td></tr>
+    <tr>
+    <td>
+    <input type="Submit" value="Book Now">
+    <input type="Reset" value="Cancel">
+    </td></tr>
+    </table></form>
+    </p>
+    </div>
+</div>
+</div>
+</body>
+</html>

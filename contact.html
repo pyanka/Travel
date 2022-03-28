@@ -1,0 +1,236 @@
+<html>
+<head>
+<script type="text/javascript">
+function validation()
+{
+var RE_CONTACTNO=/^\d{10,11}$/;
+var RE_EMAIL=/^(\w+[\-\.])*\w+@(\w+\.)+[A-Za-z]+$/;
+var u4=document.getElementById("nam").value;
+var u5=document.getElementById("em").value;
+var u6=document.getElementById("cont").value;
+var u7=document.getElementById("add").value;
+if(u4=="")
+{
+alert("Name cannot be left blank");
+return false;
+}
+if(u5=="")
+{
+alert("Email ID cannot be left blank");
+return false;
+}
+if(!RE_EMAIL.test(u5))
+{
+alert("Email should be a valid one !");
+return false;
+}
+if(u6=="")
+{
+alert("Contact cannot be left blank");
+return false;
+}
+if(!RE_CONTACTNO.test(u6))
+{
+alert("Contact should be numeric and contain atleast 10 digits");
+return false;
+}
+if(u7=="")
+{
+alert("Please enter your Message.");
+return false;
+}
+}
+</script>
+<style type="text/css">
+#h3
+{
+height:67px;
+width: 1000px;
+background-color:red;
+float:left;	
+}
+ul
+{
+display: inline-flex;
+margin: 0;
+padding: 0;	
+list-style-type:none;
+overflow:hidden;
+background-color:rgb(238, 16, 16);	
+}
+li
+{
+width:140px;
+margin: 10px;
+padding: 15px;	
+}
+li a
+{
+text-decoration: none;	
+display: block;	
+color: white;
+text-align: centre;	
+}
+li:hover
+{
+background: red;
+border-radius: 3px;	
+}
+.sub-menu-1
+{
+	display: none;
+}
+li:hover .sub-menu-1
+{
+	display: block;
+	position: absolute;
+	background: red;
+    margin-top: 15px;
+	margin-left: -15px;
+}
+li:hover .sub-menu-1 ul
+{
+	display: block;
+	margin: 10px;
+}
+li:hover .sub-menu-1 ul li
+{
+	width: 150px;
+	padding: 10px;
+	border-bottom: 1px dotted #fff;
+	background: transparent;
+	border-radius: 0;
+	text-align: left;
+}
+li:hover .sub-menu-1 ul li:last-child
+{
+	border-bottom: none;
+}
+li:hover .sub-menu-1 ul li a:hover
+{
+	color: #b2ff00;
+}
+#content
+{
+height:550px;
+width:1330px;
+background-color:white;
+background:url("images/conus.jpg");
+background-size: 100% 100%;
+float:left;
+}
+#content1
+{
+height:270px;
+width:400px;
+background-color: none;
+float:left;
+}
+#form{width: 300px; height: 300px; margin: 0 auto;}
+input[type=text], select {
+  width: 100%;
+  padding: 10px 20px;
+  margin: 5px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+input[type=contact], select {
+  width: 100%;
+  padding: 10px 30px;
+  margin: 5px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+textarea {
+  width: 100%;
+  padding: 12px 25px;
+  margin: 5px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+input[type=submit] {
+  width: 100%;
+  background-color: #44b856;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+input[type=reset] {
+  width: 30%;
+  background-color:  #44b856;;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+input[type=submit]:hover {
+  background-color:  #36743f;;
+}
+input[type=reset]:hover {
+  background-color:  #36743f;;
+}
+</style>
+</head>
+<body>
+<div id="h3">
+<ul>
+<li><a href="index.html">Home</a></li>
+<li><a href="about.html">About Us</a></li>
+<li><a href="tours.html">Tours & Packages</a></li>
+<li><a href="gallery.html">Gallery</a></li>
+<li><a href="contact.html">Contact Us</a></li>
+<li><a href="#">Login</a>
+    <div class="sub-menu-1">
+		<ul>
+			<li><a href="adminlog.html">Admin Login</a></li>
+			<li><a href="userlog.html">User Login</a></li>
+		</ul>
+	</div>
+</li>			  
+<li><a href="userreg.html">Sign Up</a>
+</li>		
+</ul>
+</div>
+<div id="content">
+<div id="form">	
+<div id="content1">
+<h2>Contact Us</h2>
+<form name="f2"  onsubmit="return validation()"  action="php/message.php" method="post">
+<table>
+<tr>
+<td>Name</td>
+<td><input type="text" name="name" id="nam" placeholder="Name">
+</td></tr>
+<tr>
+<td>Email ID</td>
+<td><input type="text" name="mail" id="em" placeholder="Email ID">
+</td></tr>
+<tr>
+<td>Contact</td>
+<td><input type="Contact" name="contact" id="cont" placeholder="Contact">
+</td></tr>
+<tr>
+<td>Message</td>
+<td><textarea rows="7" cols="30" name="address" id="add">
+</textarea>
+</td></tr>
+<tr>
+<td><input type="Submit" value="Submit"></td>
+<td><input type="Reset" value="Cancel"></td></tr>
+</table></form>
+</div>
+</div>
+</div>
+</body>
+</html>        

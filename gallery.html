@@ -1,0 +1,167 @@
+<html>
+<head>
+<style type="text/css">
+#h3
+{
+height:67px;
+width: 1000px;
+background-color:red;
+float:left;	
+}
+ul
+{
+display: inline-flex;
+margin: 0;
+padding: 0;	
+list-style-type:none;
+overflow:hidden;   
+background-color:rgb(238, 16, 16);	
+}
+li
+{
+width: 140px;
+margin: 10px;
+padding: 15px;	
+}
+li a
+{
+text-decoration: none;	
+display: block;	
+color: white;
+text-align: centre;	
+}
+li:hover
+{
+background: red;
+border-radius: 3px;	
+}
+.sub-menu-1
+{
+	display: none;
+}
+li:hover .sub-menu-1
+{
+	display: block;
+	position: absolute;
+	background: red;
+	margin-top: 15px;
+	margin-left: -15px;
+}
+li:hover .sub-menu-1 ul
+{
+	display: block;
+	margin: 10px;
+}
+li:hover .sub-menu-1 ul li
+{
+	width: 150px;
+	padding: 10px;
+	border-bottom: 1px dotted #fff;
+	background: transparent;
+	border-radius: 0;
+	text-align: left;
+}
+li:hover .sub-menu-1 ul li:last-child
+{
+	border-bottom: none;
+}
+li:hover .sub-menu-1 ul li a:hover
+{
+	color: #b2ff00;
+}
+#content
+{
+height:680px;
+width:1330px;
+background-color:white;
+background:url("images/index.jpg");
+background-size: 100% 100%;
+float:left
+}
+div.gallery {
+  margin: 5px;
+  border: 1px solid rgb(29, 17, 17);
+  float: right;
+  width: 345px;
+  height: 280px
+}
+
+div.gallery:hover {
+  border: 1px solid rgb(238, 25, 25);
+}
+
+div.gallery img {
+  width: 100%;
+  height: auto;
+}
+
+div.desc {
+  padding: 15px;
+  text-align: center;
+}
+</style>
+</head>
+<body>
+<div id="h3">
+<ul>
+<li><a href="index.html">Home</a></li>
+<li><a href="about.html">About Us</a></li>
+<li><a href="tours.html">Tours & Packages</a></li>
+<li><a href="gallery.html">Gallery</a></li>
+<li><a href="contact.html">Contact Us</a></li>
+<li><a href="#">Login</a>
+    <div class="sub-menu-1">
+		<ul>
+			<li><a href="adminlog.html">Admin Login</a></li>
+			<li><a href="userlog.html">User Login</a></li>
+		</ul>
+	</div>
+</li>			  
+<li><a href="userreg.html">Sign Up</a>
+</li>		
+</ul>
+</div>
+<div id="content">
+	<div class ="gallery">
+		
+		<a target="_blank" href="images/himalaya.jpg">
+			<img src="images/himalaya.jpg" alt="Trolltunga Norway" width="600" height="400">
+			</a>
+			<div class="desc">Himalayas</div>
+			</div>
+			<div class ="gallery">
+		
+				<a target="_blank" href="images/north.jpg">
+				<img src="images/north.jpg" alt="Trolltunga Norway" width="600" height="400">
+				</a>
+				<div class="desc">Northern Lights</div>
+				</div>
+				<div class ="gallery">
+		
+				<a target="_blank" href="images/jammu.jpg">
+				<img src="images/jammu.jpg" alt="Trolltunga Norway" width="600" height="400">
+				</a>
+				<div class="desc">Jammu and Kashmir</div>
+				</div>	
+					<div class="gallery">
+						<a target="_blank" href="images/amritsar.jpg">
+						<img src="images/amritsar.jpg" alt="Trolltunga Norway" width="600" height="400">
+						</a>
+						<div class="desc">Amritsar</div>
+						</div>	
+				<div class="gallery">
+					<a target="_blank" href="images/4.jpg">
+					<img src="images/4.jpg" alt="Trolltunga Norway" width="600" height="400">
+					</a>
+					<div class="desc">London</div>
+					</div>
+					<div class="gallery">
+					<a target="_blank" href="images/5.jpg">
+					<img src="images/5.jpg" alt="Trolltunga Norway" width="600" height="400">
+					</a>
+					<div class="desc">Pattaya</div>
+					</div>	
+</div>
+</div>
+</body>
+</html>    

@@ -1,0 +1,168 @@
+<html>
+<head>
+<style type="text/css">
+#h3
+{
+height:67px;
+width: 1000px;
+background-color:red;
+float:left;	
+}
+ul
+{
+display: inline-flex;
+margin: 0;
+padding: 0;	
+list-style-type:none;
+overflow:hidden;
+background-color:rgb(238, 16, 16);	
+}
+li
+{
+width:220px;
+margin: 10px;
+padding: 15px;	
+}
+li a
+{
+text-decoration: none;	
+display: block;	
+color: white;
+text-align: centre;	
+}
+li:hover
+{
+background: red;
+border-radius: 3px;	
+}
+.sub-menu-1
+{
+	display: none;
+}
+li:hover .sub-menu-1
+{
+	display: block;
+	position: absolute;
+	background: red;
+	margin-top: 15px;
+    margin-left: -15px;
+}
+li:hover .sub-menu-1 ul
+{
+	display: block;
+    margin: 10px;
+}
+li:hover .sub-menu-1 ul li
+{
+	width: 150px;
+	padding: 10px;
+	border-bottom: 1px dotted #fff;
+	background: transparent;
+	border-radius: 0;
+	text-align: left;
+}
+li:hover .sub-menu-1 ul li:last-child
+{
+	border-bottom: none;
+}
+li:hover .sub-menu-1 ul li a:hover
+{
+	color: #b2ff00;
+}
+#content
+{
+    height:550px;
+width:1350px;
+background-color:white;
+background:url("images/admin.jpg");
+background-size: 100% 100%;
+float:left;
+}
+#form{width: 300px; height: 300px; margin: 0 auto;}
+input[type=text]  {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 5px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+input[type=file]  {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 5px 0;
+}
+input[type=submit] {
+  width: 100%;
+  background-color: #4CAF50;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+input[type=reset] {
+  width: 100%;
+  background-color: #4CAF50;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+input[type=submit]:hover {
+  background-color: #45a049;
+}
+input[type=reset]:hover {
+  background-color: #45a049;
+}
+
+</style>
+</head>
+<body>
+<div id="h3">
+<ul>
+<li><a href="adminhome.php">Home</a></li>
+<li><a href="packages.php">Tour's Modification</a></li>
+<li><a href="addtour.html">Add Tour</a></li>
+<li><a href="viewmessage.php">Messages</a></li>
+<li><a href="logout.php">Log Out</a></li>        
+</ul>
+</div>
+<div id="content">
+	<div id="form">
+<h1>Add A Tour!</h1>
+<form  name="f3" onsubmit="return validation()" action="php/adminconnect.php" method="post"  enctype="multipart/form-data">
+<p><table>
+<tr>
+<td>Tour ID</td>
+<td><input type="text" name="tid" id="ud" placeholder="Tour ID">
+</td></tr>
+<tr>
+<td>Tour Name</td>
+<td><input type="text" name="tname" id="pd" placeholder="Tour Name">
+</td></tr>
+<tr>
+<td>Package Price</td>
+<td><input type="text" name="price" id="cp" placeholder="Price">
+</td></tr>
+<tr>
+<td>Select Image to Upload :</td>
+<td><input type="file" name="file" id="file">
+</td>
+</tr>
+<tr>
+<td>
+<input type="Submit" value="Submit">
+<input type="Reset" value="Cancel">
+</td></tr>
+</table></form>
+</p>
+</div>
+</div>
+</div>
+</body>
+</html>
